@@ -1,0 +1,27 @@
+{
+  "name": "果果排序 - 水果益智遊戲",
+  "short_name": "果果排序",
+  "description": "像素風格水果排序益智遊戲，無限關卡！",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0820",
+  "theme_color": "#1a0a2e",
+  "lang": "zh-TW",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "screenshots": []
+}
