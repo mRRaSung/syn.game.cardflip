@@ -1,7 +1,7 @@
 {
-  "name": "果果排序 - 水果益智遊戲",
-  "short_name": "果果排序",
-  "description": "像素風格水果排序益智遊戲，無限關卡！",
+  "name": "動物翻翻樂",
+  "short_name": "動物翻翻樂",
+  "description": "翻牌益智遊戲，無限關卡！",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
