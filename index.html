@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta name="theme-color" content="#fff9f0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="翻翻樂">
+  <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjogIlx1NTJkNVx1NzI2OVx1N2ZmYlx1N2ZmYlx1NmEwMiIsICJzaG9ydF9uYW1lIjogIlx1N2ZmYlx1N2ZmYlx1NmEwMiIsICJkZXNjcmlwdGlvbiI6ICJcdTUyZDVcdTcyNjlcdTkxNGRcdTVjMGRcdTdmZmJcdTcyNGNcdThhMThcdTYxYjZcdTkwNGFcdTYyMzIiLCAic3RhcnRfdXJsIjogIi4vIiwgInNjb3BlIjogIi4vIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmY5ZjAiLCAidGhlbWVfY29sb3IiOiAiI2ZmZjlmMCIsICJsYW5nIjogInpoLVRXIiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTUFBQUFEQUNBWUFBQUJTM0d3SEFBQUYwRWxFUVZSNG5PM2J1N0ViUnhDRjRWNldQRGl3R0FZVFlTNE1ocmt3RVlaQml3N3RLME5hRnJEQXZuZW1IK2YvWEpVdVVOUG5UQzlRNEdET1BuNy8rZkIrRC9BejNHK0Q2K3YzZmtFQ2p5VzlDOUhseFFnOWp1aFJocVl2UVBCeGhaWkZhUEtIQ1Q1YWFGR0VTLzhnd1VjUFZ4YmhrajlFOE9IaGlpSjhPdnNIQ0QrOFhKRzlVd1VnL1BCMk5vT0hWZ2pCUjBSSEhvbDJid0RDajZpT1pITlhBUWcvb3R1YjBjMEZJUHpJWWs5V054V0E4Q09iclprOS9UVW9rTmxxQWJqOWtkV1c3QzRXZ1BBanU3VU16eGFBOEtPS3BTenpHUURTM2hhQTJ4L1Z6R1dhRFFCcEx3WGc5a2RWNzdMTkJvQzBwd0p3KzZPNmFjYi84WG9qS241OStmYmp6UC8vK2VmM3IxZTlGN3o2Ky90cGJ2L2p6b2I4S01weDNQaHZCeWpBQVY2QlgwTWh0cU1BTzBVTi9SektzT3lwQUlUL3ZXeWhuME1aM2h2dXQ0RUN2RkVsK0ZNVTRSa0ZlRkExOUhNb0F3VXdNNzNnVHlrWFliamZoa0UxL09yQm4xSXRnbHdCQ1A0eXRTSkkvUmFJOEs5VE95T0pEYUEyMUtzb2JJUHlHNER3SDZkd2RtVTNnTUx3ZXFxNkRVcHVBTUovdmFwbldxNEFWUWNWUWNXekxmTUlWSEU0a1ZWNUpDcXhBUWgvZjFYT1BIMEJxZ3dpb3dwbm43b0FGUWFRWGZZWnBDMUE5b092SlBNc1VoWWc4NEZYbFhVbTZRcVE5YUFWWkp4TnFnSmtQR0ExMldhVXBnRFpEbFpacGxtbEtFQ21BOFYvc3N3c2ZBR3lIQ1JlWlpoZCtBSUFMWVV1UUlZYkJNdWl6ekJzQWFJZkhMYUxQTXVRQlloOFlEZ202a3hERmdEb0pWd0JvdDRVT0MvaWJFTVZJT0lCNFZyUlpoeXFBRUJ2WVFvUTdXWkFPNUZtSGFJQWtRNEVmVVNaZVlnQ0FGN2NDeERsSmtCL0VXYnZYZ0RBazJzQkl0d0E4T1dkQVRZQXBMa1Z3THY1aU1NekMyd0FTS01Ba09aU0FCNS9NT1dWQ1RZQXBIVXZBTGMvNW5oa2d3MEFhUlFBMHJvV2dNY2ZyT21kRVRZQXBGRUFTT3RXQUI1L3NGWFByTEFCSUkwQ1FCb0ZnTFF1QmVENUgzdjF5Z3diQU5Jb0FLUlJBRWlqQUpCR0FTQ05Ba0JhOHdMd0ZTaU82cEVkTmdDa1VRQklvd0NRUmdFZ2pRSkFHZ1dBTkFvQWFSUUEwaWdBcEZFQVNLTUFrRVlCSUkwQ1FCb0ZnRFFLQUduTkMvRDU1L2V2clY4RE5mWElEaHNBMGlnQXBGRUFTS01Ba0VZQklJMENRRnFYQXZCVktQYnFsUmsyQUtSUkFFaWpBSkRXclFCOERzQldQYlBDQm9BMENnQnBYUXZBWXhEVzlNNElHd0RTS0FDa2RTOEFqMEdZNDVFTk5nQ2t1UlNBTFlBcHIweXdBU0NOQWtDYVd3RjRETUxJTXd0c0FFaHpMUUJiQU40WllBTkFtbnNCdkc4QStJa3dlL2NDQUo1Q0ZDRENUWUMrb3N3OFJBSE00aHdJMm9zMDZ6QUZBRHlFS2tDa213RnRSSnR4cUFLWXhUc2dYQ2ZpYk1NVkFPZ3BaQUVpM2hRNEorcE1ReGJBTE82QlliL0lzd3hiQUxQWUI0ZHRvczh3ZEFHQTFzSVhJUG9OZ25rWlpoZStBR1k1RGhMUHNzd3NSUUhNOGh3b2NzMHFUUUhNY2gyc3Ftd3pTbFVBczN3SHJDVGpiTklWd0N6blFWZVhkU1lwQzJDVzk4QXJ5anlMdEFVd3kzM3dWV1NmUWVvQ21PVWZRR1lWemo1OUFjeHFEQ0tiS21jK2ZQeis4K0g5SnE3MDY4dTNIOTd2b2JJcXdSK1YyQUNQcWcwb2tvcG5XNjRBWmpVSDVhM3FtWlo3QkpyaWtlaWNxc0VmbGR3QWo2b1BzQ1dGc3l1L0FSNnhEYlpSQ1A2by9BWjRwRFRZbzlUT1NHb0RQR0liUEZNTC9tZ3dNMU10Z1JsRlVBMittZGx3dnczeUJSaXBGVUU1K0NNS01LTnFHUWo5TXdxd29rb1JDUDU3Znd0Z1JnbldaQ3NEb1Y4MjNHK0QyZjhmZ3Mwb3dCNVJ5MERvdDZNQUYvSXFCSUUvN3FVQVpwU2doYlBsSU9UWEc4TnZSZ0VnNkxFQW4rYitBMURSTk9OU3Z3VUNwbDRLd0JaQVZlK3l6UWFBdExjRllBdWdtcmxNc3dFZ2JiWUFiQUZVc1pUbHhRMUFDWkRkV29aWEg0RW9BYkxha2wwK0EwRGFwZ0t3QlpETjFzeHUzZ0NVQUZuc3llcXVSeUJLZ09qMlpuVDNad0JLZ0tpT1pQTlVtUG41TkNJNGN5bWYraGFJYlFCdlp6TjQrbXRRU2dBdlYyVHYwdkR5U0lRZXJyeDBtOXplRkFFdHRIamFhUHI0UWhGd2haYVAyVjJlM3lrQ2p1angrYkw3QjFqS2dDVzl2MVJ4L3dhSFFtanovaGJ4WDZvRVZIVFJqMHBvQUFBQUFFbEZUa1N1UW1DQyIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn0sIHsic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBZ0FBQUFJQUNBWUFBQUQwZU5UNkFBQVJQVWxFUVZSNG5PM2NNV0lieHhYSDRZVmJOYXB5akZ6RWQ4bGhjaGRmeE1kSTVjYTFVa2kwSUJJRXNOalptVGZ6Lzc0MlJjZzE1NzBmWjBGZE5ycjY5dGZmMzBaL0RRQVZYYjUrdVl6K0dwSjQyQ2V3NUFIYUVnZnRlYUFIV2ZZQVk0aUNZenk4blN4OGdKb0V3VDRlMWhNc2ZZQzVpSUhIUEtBYkxIeUF0UWlDanp5UUt4WS93TnFFd0UveEQ4TFNCOGlVSGdPeDM3ekZEOEMyNVlaQTNEZHQ4UU53UzFvSVJIeXpsajRBZXlURXdOTGZvTVVQd0JFcmg4QnZvNytBczFqK0FCeTE4aTVacm14Vy9vOEZ3RGlyM1FZczg4MVkvQUQwc0VvSVRQOU5XUHdBakRCN0NFejlHUURMSDRCUlp0OUJVOWJMN0E4ZGdMWE1lQnN3M1EyQTVROUFOVFB1cHFrQ1lNWUhERUNHMlhiVUZGY1dzejFVQUxMTjhFcWcvQTJBNVEvQWJHYllYYVVEWUlZSENBQzNWTjloSmE4b3FqODBBTmlqNGl1QmNqY0FsajhBcTZtNDIwb0ZRTVVIQkFBdFZOdHhaUUtnMm9NQmdOWXE3Ym9TQVZEcGdRREFtYXJzdk9FQlVPVkJBRUF2RlhiZjBBQ284QUFBWUlUUk8zQllBSXoreGdGZ3RKRzdjRWdBV1A0QThOMm9uZGc5QUN4L0FQalZpTjNZTlFBc2Z3QzRyZmVPN0JZQWxqOEEzTmR6VjNZSkFNc2ZBSjdUYTJlZUhnQ1dQd0RzMDJOM25ob0FsajhBdk9ic0hUcjhYd0lFQVBvN0xRRDg5ZzhBeDV5NVMwOEpBTXNmQU5vNGE2YzJEd0RMSHdEYU9tTzMrZ3dBQUFScUdnQisrd2VBYzdUZXNjMEN3UElIZ0hPMTNMVk5Bc0R5QjRBK1d1MWNud0VBZ0VDSEE4QnYvd0RRVjR2ZGV5Z0FMSDhBR09Qb0R2WUtBQUFDdlJ3QWZ2c0hnTEdPN0dJM0FBQVE2S1VBOE5zL0FOVHc2azUyQXdBQWdYWUhnTi8rQWFDV1YzYnpyZ0N3L0FHZ3ByMDcyaXNBQUFqMGRBRDQ3UjhBYXR1enE5MEFBRUFnQVFBQWdaNEtBTmYvQURDSFozZTJHd0FBQ1BRd0FQejJEd0J6ZVdaM3V3RUFnRUNYZS8rajMvNWhEdi83OTMvKzZQbi85NjgvLy90N3ovOC80RFdYcjE4KzNmTUNBQXJydmRoYkV3b3dsZ0NBd21aZjhxOFNCM0MrbHdMQThvZjJVcGY5czBRQnRQZFpCQWdBT0lsbDM0WW9nR04yQllEbEQvdFk5bjJKQXRqblZnUUlBSGlScFYrREdJREhCQUFjWU9IUFFSREFSd0lBZHJMMDV5WUc0THVuQXNEeUo1bUZ2elpCUUxMM0VTQUFpR2ZwWnhJRHBCRUE4SVBGejdZSkFYTGNEUURMbjlWWit0d2pCbGpkZFFRSUFKWm42Zk1LTWNDS0JBQVJMSDVhRUFLc1JBQ3dOSXVmTXdnQlZuQXpBQ3gvWm1icDA1TVlZR1p2RVNBQW1KckZ6MGhDZ0JrSkFLWm04Vk9KRUdBbUFvQXBXZnhVSmdTWWdRQmdLaFkvTXhFQ1ZQWkxBRmorVkdYeE16TWhRRldYcjE4dUFvQ1NMSDVXSWdTb1JnQlFqc1hQeW9RQVZRZ0F5ckQ0U1NJRUdPM3k5Y3ZsdDlGZkJGaitwUEV6VHdWdUFCakdFQVMzQVl6aEZRQkRXUHp3a1JDZ3A4dlhMNWVMNVU4dkZqODhKZ1RveFdjQTZNTHloK2M0Sy9UaUJvQlRHV2J3T3JjQm5Na05BS2V4L09FWVo0Z3p1UUdnT1VNTDJuTWJRR3R1QUdqSzhvZHpPRnUwNWdhQUpnd242TWR0QUMyNEFlQXd5eC82Y3Vab1FRQndpRUVFWXpoN0hPVVZBQzh4ZktBT3J3UjRoUnNBZHJQOG9SWm5rbGNJQUhZeGFLQW1aNU85dkFMZ0tZWUx6TU1yQVo3aEJvQ0hMSCtZaXpQTE13UUFkeGtrTUNkbmwwZThBdUFtd3dQVzRaVUF0N2dCNEFQTEg5YmlUSE9MQU9BWEJnV3N5ZG5tUFFIQVB3d0lXSnN6empVQndMWnRCZ09rY05aNUl3QXdFQ0NNTTgrMkNZQjRCZ0ZrY3ZieFo0Q2hISDdnalQ4VHpPUUdJSkRsRDF3ekV6SUpnREFPT25DTDJaQkhBQVJ4d0lGN3pJZ3NBaUNFZ3cwOHc2eklJUUFDT05EQUhtWkdCZ0d3T0FjWmVJWFpzVDRCc0RBSEdEakNERm1iQUZpVWd3dTBZSmFzU3dBc3lJRUZXakpUMWlRQUZ1T2dBbWN3VzlZakFCYmlnQUpuTW1QV0lnQVc0V0FDUFpnMTZ4QUFBQkJJQUN4QWtRTTltVGxyRUFDVGN4Q0JFY3llK1FtQWlUbUF3RWhtME53RXdLUWNQS0FDczJoZUFtQkNEaHhRaVprMEp3RXdHUWNOcU1oc21vOEFtSWdEQmxSbVJzMUZBQUJBSUFFd0NXVU56TUNzbW9jQW1JQURCY3pFekpxREFDak9RUUptWkhiVkp3QUFJSkFBS0V4QkF6TXp3Mm9UQUVVNU9NQUt6TEs2QkVCQkRneXdFak90SmdFQUFJRUVRREZLR1ZpUjJWYVBBQ2pFQVFGV1pzYlZJZ0NLY0RDQUJHWmRIUUlBQUFJSmdBSVVNWkRFekt0QkFBem1JQUNKekw3eEJBQUFCQklBQXlsZ0lKa1pPSllBR01RUFBvQlpPSklBQUlCQUFtQUF4UXZ3azVrNGhnRG96QTg2d0VkbVkzOENBQUFDQ1lDT0ZDN0E1OHpJdmdRQUFBUVNBSjBvVzRESHpNcCtCQUFBQkJJQUhTaGFnT2VabVgwSWdKUDVRUWJZeit3OG53QUFnRUFDNEVRS0Z1QjFadWk1QkFBQUJCSUFKMUd1QU1lWnBlY1JBQUFRU0FDY1FMRUN0R09tbmtNQUFFQWdBZENZVWdWb3oyeHRUd0FBUUNBQjBKQkNCVGlQR2R1V0FBQ0FRQUtnRVdVS2NENnp0aDBCQUFDQkJFQURpaFNnSHpPM0RRRUFBSUVFd0VGS0ZLQS9zL2M0QVFBQWdRUUFBQVFTQUFlNGdnSVl4d3crUmdBQVFDQUI4Q0xsQ1RDZVdmdzZBUUFBZ1FUQUN4UW5RQjFtOG1zRUFBQUVFZ0FBRUVnQTdPU3FDYUFlczNrL0FRQUFnUVFBQUFRU0FEdTRZZ0tveTR6ZVJ3QUFRQ0FCOENSbENWQ2ZXZjA4QVFBQWdRUUFBQVFTQUU5d3BRUXdEelA3T1FJQUFBSUpBQUFJSkFBQUlKQUFlTUM3SklENW1OMlBDUUFBQ0NRQUFDQ1FBTGpERlJMQXZNencrd1FBQUFRU0FBQVFTQUFBUUNBQjhBbnZqZ0RtWjVaL1RnQUFRQ0FCQUFDQkJNQU5yb3dBMW1HbTN5WUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBRGU4V0VSZ1BXWTdSOEpBQUFJSkFBQUlKQUFBSUJBQWdBQUFnbUFLejRrQXJBdU0vNVhBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUM0QWNmRGdGWW4xbi9rd0FBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpnTTJmaFFBa01mTy9Fd0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkFvUGdEOGkxQUFlY3grQVFBQWtRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFLRDRBL3ZYbmYzOGYvVFVBMEpmWkx3QUFJSklBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBTmo4aTFBQVNjejg3d1FBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBUHpnejBJQTFtZlcveVFBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUN1K0hBSXdMck0rRjhKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ21BZDN4SUJHQTladnRIQWdBQUFna0FBQWdrQUFBZ2tBQUFnRUFDNEFZZkZnRlloNWwrbXdBQWdFQUNBQUFDQ1lCUHVESUNtSjlaL2prQkFBQ0JCQUFBQkJJQUFCQklBTnpoM1JIQXZNencrd1FBQUFRU0FBQVFTQUE4NEFvSllENW05Mk1DQUFBQ0NRQUFDQ1FBQUNDUUFIaUNkMGtBOHpDem55TUFBQ0NRQUFDQVFBTGdTYTZVQU9venE1OG5BQUFna0FEWVFWa0MxR1ZHN3lNQUFDQ1FBQUNBUUFKZ0oxZE1BUFdZemZzSkFBQUlKQUFBSUpBQWVJR3JKb0E2ek9UWENBQUFDQ1FBWHFRNEFjWXppMThuQUFBZ2tBQTRRSGtDakdNR0h5TUFBQ0NRQUFDQVFBTGdJRmRRQVAyWnZjY0pBQUFJSkFBYVVLSUEvWmk1YlFnQUFBZ2tBQnBScEFEbk0ydmJFUUFBRUVnQU5LUk1BYzVqeHJZbEFBQWdrQUJvVEtFQ3RHZTJ0aWNBQUNDUUFEaUJVZ1ZveDB3OWh3QUFnRUFDNENTS0ZlQTRzL1E4QWdBQUFnbUFFeWxYZ05lWm9lY1NBQUFRU0FDY1RNRUM3R2Qybms4QWRPQUhHZUI1Wm1ZZkFnQUFBZ21BVGhRdHdHTm1aVDhDQUFBQ0NZQ09sQzNBNTh6SXZnUUFBQVFTQUowcFhJQ1B6TWIrQk1BQWZ0QUJmaklUeHhBQUFCQklBQXlpZUFITXdwRUV3RUIrOElGa1p1QllBZ0FBQWdtQXdSUXdrTWpzRzA4QUZPQWdBRW5NdkJvRUFBQUVFZ0JGS0dJZ2dWbFhod0FveE1FQVZtYkcxU0lBaW5GQWdCV1piZlVJQUFBSUpBQUtVc3JBU3N5MG1nUkFVUTRNc0FLenJDNEJVSmlEQTh6TURLdE5BQUJBSUFGUW5JSUdabVIyMVNjQUp1QWdBVE14cytZZ0FDYmhRQUV6TUt2bUlRQUFJSkFBbUlpeUJpb3pvK1lpQUNiamdBRVZtVTN6RVFBVGN0Q0FTc3lrT1FtQVNUbHdRQVZtMGJ3RXdNUWNQR0FrTTJodUFtQnlEaUF3Z3RrelB3R3dBQWNSNk1uTVdZTUFBSUJBQW1BUmloem93YXhaaHdCWWlJTUpuTW1NV1lzQVdJd0RDcHpCYkZtUEFGaVFnd3EwWkthc1NRQXN5b0VGV2pCTDFpVUFGdWJnQWtlWUlXc1RBSXR6Z0lGWG1CM3JFd0FCSEdSZ0R6TWpnd0FJNFVBRHp6QXJjZ2lBSUE0MmNJOFprVVVBaEhIQWdWdk1oandDSUpDRERsd3pFekpkdnYzMTk3ZlJYd1RqL08vZi8vbGo5TmNBakdIeFozTURFTTRBZ0V6T1BnSUFnd0RDT1BOc213RGdCd01CTWpqcnZCRUEvTU5nZ0xVNTQxd1RBUHpDZ0lBMU9kdThKd0Q0d0tDQXRUalQzT0xQQUxuTG53bkN2Q3grN25FRHdGMEdDTXpKMmVVUkFjQkRCZ25NeFpubEdWNEJzSXRYQWxDWHhjOGViZ0RZeFlDQm1weE45aElBN0diUVFDM09KSy93Q29CRHZCS0FjU3gram5BRHdDRUdFSXpoN0hHVUFPQXdnd2o2Y3Vab3dTc0FtdkpLQU01ajhkT1NHd0NhTXFEZ0hNNFdyYmtCNERSdUErQTRpNSt6dUFIZ05BWVhIT01NY1NZM0FIVGhOZ0NlWi9IVGd4c0F1akRRNERuT0NyMWN0bTNiM0FMUWs5c0ErTWppcDZmTDF5OFhBY0F3UWdBc2ZzWVFBSlFnQkVoazhUUFM1ZXVYaTg4QU1KeEJTQm8vODFUZ0JvQlMzQWF3TW91Zktyd0NvQ3dod0Vvc2Zxb1JBSlFuQkppWnhVOVYvd1RBdG9rQWFoTUN6TVRpcDdMTDF5K1hiZnZ4R1lCdEV3RE1RUWhRbWNYUERBUUFVeE1DVkdMeE14TUJ3QktFQUNOWi9NeElBTEFVSVVCUEZqOHoreEFBMnlZQ1dJTVk0QXlXUGl0NFcvN2JKZ0JZbUJDZ0JZdWZsUWdBb2dnQlhtSHhzeUlCUUN3eHdEMldQcXY3TkFDMlRRU1FRd3l3YlpZK09hNlgvN1lKQUJBQ29TeCswZ2dBdUVNTXJNM1NKOW5EQU5nMkVRQnZCTUhjTEh6NDd2M3kzellCQUU4VEEzT3c5T0VqQVFBTkNZSWFMSHg0VEFEQVNjUkFYNVkrN1BOMEFHeWJDSUNqUkVFYmxqMGNjMnY1YjVzQWdLNUV3WDJXUGJTM093QzJUUVJBRDZsUllObkQrVDViL3RzbUFLQzAyZVBBa29leEJBQXNybmNvV093d2g1Y0RZTnRFQUFETTZON3kzN1p0KzYzWEZ3SUExUEV3QUI0VkJBQlF5ek83MncwQUFBUjZLZ0RjQWdEQUhKN2QyVzRBQUNDUUFBQ0FRRThIZ05jQUFGRGJubDN0QmdBQUF1MEtBTGNBQUZEVDNoMjkrd1pBQkFCQUxhL3NacThBQUNEUVN3SGdGZ0FBYW5oMUo3c0JBSUJBTHdlQVd3QUFHT3ZJTG5ZREFBQ0JEZ1dBV3dBQUdPUG9EajU4QXlBQ0FLQ3ZGcnZYS3dBQUNOUWtBTndDQUVBZnJYWnVzeHNBRVFBQTUycTVhNXUrQWhBQkFIQ08xanZXWndBQUlGRHpBSEFMQUFCdG5iRmJUN2tCRUFFQTBNWlpPL1cwVndBaUFBQ09PWE9YK2d3QUFBUTZOUURjQWdEQWE4N2VvYWZmQUlnQUFOaW54KzdzOGdwQUJBREFjM3J0ekc2ZkFSQUJBSEJmejEzWjlVT0FJZ0FBYnV1OUk3di9GWUFJQUlCZmpkaU5RLzRNVUFRQXdIZWpkdUt3ZndkQUJBQ1FidVF1SFBvUEFZa0FBRktOM29IRC95WEEwUThBQUhxcnNQdUdCOEMyMVhnUUFOQkRsWjFYSWdDMnJjNERBWUN6Vk5wMVpRSmcyMm85R0FCb3FkcU9LeFVBMjFidkFRSEFVUlYzVzdrdjZOcTN2LzcrTnZwckFJQlhWVno4YjhyZEFGeXIvT0FBNEo3cU82eDBBR3hiL1FjSUFPL05zTHZLZjRIWHZCSUFvTElaRnYrYjhqY0ExMlo2c0FCa21XMUhUUlVBMnpiZkF3WmdmVFB1cHVtKzRHdGVDUUF3MG95TC84MTBOd0RYWm43d0FNeHQ5aDAwOVJkL3pXMEFBRDNNdnZqZkxQRk5YQk1DQUp4aGxjWC9acWx2NXBvUUFLQ0YxUmIvbTZrL0EzRFBxdi9CQU9objVWMnk3RGQyelcwQUFIdXN2UGpmTFA4TnZpY0dBTGdsWWVsZmkvcG1yd2tCQUxZdGIvRy9pZnltcndrQmdFeXBpLzlOOURmL25oZ0FXRnY2MHIvbVFkd2dCQURXWXZGLzVJRThRUkFBek1YQ2Y4d0Qya2tNQU5SazZlL2pZUjBrQ0FER3NQQ1A4ZkJPSUFvQTJyTHMyL05BT3hNSEFMZFo4bjM5SDk4WFFqOG9sNE1JQUFBQUFFbEZUa1N1UW1DQyIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn1dLCAiY2F0ZWdvcmllcyI6IFsiZ2FtZXMiLCAiZW50ZXJ0YWlubWVudCJdfQ==">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#fff9f0">
+<title>🐾 動物翻翻樂</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:         #fff9f0;
+  --card-back:  #ff9800;
+  --card-front: #ffffff;
+  --card-done:  #e8f5e9;
+  --card-brd:   #f0c080;
+  --card-done-brd: #81c784;
+  --card-sel:   #ffcc02;
+  --text:       #5d4037;
+  --text-sub:   #a1887f;
+  --accent:     #ff9800;
+  --accent2:    #ff5722;
+  --green:      #43a047;
+  --shadow:     rgba(0,0,0,0.12);
+  --radius:     20px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding-bottom: 32px;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 55% 35% at 15% 10%, #ffe0b2 0%, transparent 60%),
+    radial-gradient(ellipse 45% 30% at 85% 85%, #fce4ec 0%, transparent 60%),
+    radial-gradient(ellipse 40% 25% at 75% 15%, #f3e5f5 0%, transparent 50%);
+  pointer-events: none; z-index: 0;
+}
+
+#app {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 540px;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 14px 14px;
+  gap: 14px;
+}
+
+/* ── HEADER ── */
+.header {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  background: white;
+  border-radius: 24px;
+  padding: 13px 22px;
+  box-shadow: 0 4px 16px var(--shadow);
+  border: 2px solid #ffe0b2;
+}
+.title { font-size: 22px; font-weight: 900; color: var(--accent2); }
+.title span { color: var(--text); }
+.level-tag {
+  font-size: 13px; font-weight: 900;
+  background: #fff3e0; color: var(--accent);
+  border: 2px solid #ffcc80;
+  border-radius: 20px; padding: 4px 14px;
+}
+
+/* ── STATS ── */
+.stats { display: flex; gap: 10px; width: 100%; }
+.stat-card {
+  flex: 1; background: white; border-radius: 16px;
+  border: 2px solid #ffe0b2; padding: 10px 6px;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+.stat-label { font-size: 12px; color: var(--text-sub); font-weight: 700; }
+.stat-value { font-size: 26px; font-weight: 900; color: var(--accent2); line-height: 1; }
+
+/* ── HINT TEXT ── */
+.hint-text {
+  font-size: 18px; font-weight: 700;
+  color: var(--text-sub);
+  text-align: center; min-height: 28px;
+  transition: color 0.2s;
+  padding: 0 8px;
+  line-height: 1.4;
+}
+.hint-text.good { color: var(--green); }
+.hint-text.warn { color: #e53935; }
+
+/* ── BOARD ── */
+#board {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ── CARD ── */
+.card {
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  /* 3D flip setup */
+  perspective: 600px;
+}
+
+.card-inner {
+  width: 100%; height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.42s cubic-bezier(0.4,0,0.2,1);
+  border-radius: var(--radius);
+}
+
+.card.flipped .card-inner,
+.card.matched .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute; inset: 0;
+  border-radius: var(--radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px var(--shadow);
+}
+
+/* BACK face */
+.card-back {
+  background: var(--card-back);
+  border: 3px solid #ef6c00;
+  font-size: 28px;
+  /* subtle pattern */
+  background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 50%);
+}
+
+/* decorative paw on back */
+.card-back::after {
+  content: '🐾';
+  font-size: 32px;
+  opacity: 0.35;
+}
+
+/* FRONT face */
+.card-front {
+  background: var(--card-front);
+  border: 3px solid var(--card-brd);
+  transform: rotateY(180deg);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.card.matched .card-front {
+  background: var(--card-done);
+  border-color: var(--card-done-brd);
+}
+
+.card-emoji {
+  font-size: 42px;
+  line-height: 1;
+  user-select: none;
+  transition: transform 0.2s;
+}
+
+.card.matched .card-emoji {
+  animation: matchBounce 0.5s ease;
+}
+
+@keyframes matchBounce {
+  0%,100% { transform: scale(1); }
+  40%      { transform: scale(1.35); }
+  70%      { transform: scale(0.9); }
+}
+
+/* selected glow ring */
+.card.flipped:not(.matched) .card-front {
+  box-shadow: 0 0 0 4px var(--card-sel), 0 6px 20px rgba(255,152,0,0.3);
+}
+
+/* hover */
+.card:not(.flipped):not(.matched):hover .card-back {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+.card:not(.flipped):not(.matched):active .card-inner {
+  transform: scale(0.94);
+}
+
+/* ── CONTROLS ── */
+.controls { display: flex; gap: 10px; width: 100%; }
+.btn {
+  flex: 1;
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px; font-weight: 900;
+  padding: 15px 8px;
+  border: 3px solid transparent;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+.btn:active { transform: scale(0.96); }
+.btn-reset { background: #fce4ec; color: #e91e63; border-color: #f48fb1; }
+.btn-new   { background: #e3f2fd; color: #1976d2; border-color: #90caf9; }
+.btn-harder{ background: #e8f5e9; color: var(--green); border-color: #a5d6a7; }
+
+/* ── WIN OVERLAY ── */
+#win-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(255,249,240,0.93);
+  z-index: 100;
+  align-items: center; justify-content: center;
+  flex-direction: column; gap: 0;
+}
+#win-overlay.show { display: flex; }
+
+.win-box {
+  background: white;
+  border: 4px solid var(--accent);
+  border-radius: 32px;
+  padding: 36px 40px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  box-shadow: 0 12px 48px rgba(255,152,0,0.22);
+  animation: winPop 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
+  max-width: 320px; width: 90%;
+}
+@keyframes winPop {
+  0%   { transform: scale(0.4) rotate(-6deg); opacity: 0; }
+  100% { transform: scale(1)   rotate(0deg);  opacity: 1; }
+}
+.win-emoji { font-size: 68px; line-height: 1; }
+.win-title { font-size: 28px; font-weight: 900; color: var(--accent2); }
+.win-sub   { font-size: 16px; color: var(--text-sub); font-weight: 700; text-align: center; line-height: 1.7; }
+.win-score { font-size: 38px; font-weight: 900; color: var(--accent); }
+.win-best  { font-size: 13px; color: var(--green); font-weight: 900; min-height: 20px; }
+
+.win-btns  { display: flex; gap: 10px; margin-top: 4px; width: 100%; }
+.win-btns .btn { font-size: 15px; padding: 12px 8px; }
+
+/* ── PARTICLES ── */
+.particle {
+  position: fixed; font-size: 30px;
+  pointer-events: none; z-index: 200;
+  animation: burst 1.1s ease forwards;
+}
+@keyframes burst {
+  0%   { transform: translate(0,0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translate(var(--dx),var(--dy)) scale(0.1) rotate(var(--rot)); opacity: 0; }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 380px) {
+  :root { --radius: 14px; }
+  .card-emoji { font-size: 32px; }
+  .card-back::after { font-size: 24px; }
+  .title { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="header">
+    <div class="title">🐾 動物<span>翻翻樂</span></div>
+    <div class="level-tag" id="level-tag">初級 4×3</div>
+  </header>
+
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-label">翻牌次數</div>
+      <div class="stat-value" id="stat-flips">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">配對成功</div>
+      <div class="stat-value" id="stat-matched">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">最佳紀錄</div>
+      <div class="stat-value" id="stat-best">--</div>
+    </div>
+  </div>
+
+  <p class="hint-text" id="hint">翻開牌，找出兩張相同的動物！</p>
+
+  <div id="board"></div>
+
+  <div class="controls">
+    <button class="btn btn-reset"  id="btn-reset">↺ 重玩</button>
+    <button class="btn btn-harder" id="btn-harder">⬆ 升級</button>
+    <button class="btn btn-new"    id="btn-new">🎲 新局</button>
+  </div>
+</div>
+
+<!-- Win Overlay -->
+<div id="win-overlay">
+  <div class="win-box">
+    <div class="win-emoji">🎉</div>
+    <div class="win-title">好棒！過關了！</div>
+    <div class="win-sub" id="win-sub">翻了</div>
+    <div class="win-score" id="win-score">0 次</div>
+    <div class="win-best"  id="win-best"></div>
+    <div class="win-btns">
+      <button class="btn btn-reset" id="win-replay">↺ 再玩</button>
+      <button class="btn btn-harder" id="win-harder">⬆ 升級</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+//  ANIMALS — visually distinct, easy to recognise
+// ══════════════════════════════════════════════
+const ANIMALS = ['🐶','🐱','🐭','🐰','🦊','🐻','🐼','🐨',
+                 '🐯','🐸','🐵','🐔','🐧','🦆','🐺','🦁'];
+
+// difficulty levels: [cols, rows]
+const LEVELS = [
+  { cols: 4, rows: 3, label: '初級 4×3' },
+  { cols: 4, rows: 4, label: '中級 4×4' },
+  { cols: 5, rows: 4, label: '進階 5×4' },
+  { cols: 6, rows: 4, label: '高級 6×4' },
+  { cols: 6, rows: 5, label: '挑戰 6×5' },
+  { cols: 8, rows: 4, label: '達人 8×4' },
+];
+
+// ══════════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════════
+let levelIdx   = 0;
+let cards      = [];   // [{id, emoji, flipped, matched}]
+let flippedIds = [];   // at most 2
+let flips      = 0;
+let matched    = 0;
+let pairs      = 0;
+let locked     = false;
+let initialCards = [];
+let bests      = JSON.parse(localStorage.getItem('flipBests') || '{}');
+
+// ══════════════════════════════════════════════
+//  CARD SIZE — responsive
+// ══════════════════════════════════════════════
+function getCardSize(cols) {
+  const maxW = Math.min(window.innerWidth, 540) - 28 - (cols - 1) * 10;
+  const raw  = Math.floor(maxW / cols);
+  return Math.min(Math.max(raw, 60), 88);
+}
+
+// ══════════════════════════════════════════════
+//  NEW GAME
+// ══════════════════════════════════════════════
+function startGame(lv, keepLevel = false) {
+  if (!keepLevel) levelIdx = lv;
+  const { cols, rows, label } = LEVELS[levelIdx];
+  pairs = (cols * rows) / 2;
+
+  const pool = ANIMALS.slice(0, pairs);
+  const doubled = [...pool, ...pool];
+  // shuffle
+  for (let i = doubled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [doubled[i], doubled[j]] = [doubled[j], doubled[i]];
+  }
+
+  cards = doubled.map((emoji, i) => ({ id: i, emoji, flipped: false, matched: false }));
+  initialCards = cards.map(c => ({ ...c }));
+  flippedIds = [];
+  flips      = 0;
+  matched    = 0;
+  locked     = false;
+
+  document.getElementById('level-tag').textContent = label;
+  document.getElementById('win-overlay').classList.remove('show');
+  updateStats();
+  renderBoard(cols, rows);
+  showHint('翻開牌，找出兩張相同的動物！');
+}
+
+function resetGame() {
+  cards = initialCards.map(c => ({ ...c }));
+  flippedIds = [];
+  flips   = 0;
+  matched = 0;
+  locked  = false;
+  const { cols, rows } = LEVELS[levelIdx];
+  document.getElementById('win-overlay').classList.remove('show');
+  updateStats();
+  renderBoard(cols, rows);
+  showHint('重新開始囉！加油！');
+}
+
+function harderGame() {
+  if (levelIdx < LEVELS.length - 1) levelIdx++;
+  startGame(levelIdx, true);
+}
+
+// ══════════════════════════════════════════════
+//  RENDER
+// ══════════════════════════════════════════════
+function renderBoard(cols, rows) {
+  const board = document.getElementById('board');
+  const sz    = getCardSize(cols);
+  board.style.gridTemplateColumns = `repeat(${cols}, ${sz}px)`;
+  board.innerHTML = '';
+
+  cards.forEach(card => {
+    const el = document.createElement('div');
+    el.className = 'card' +
+      (card.flipped  ? ' flipped'  : '') +
+      (card.matched  ? ' matched'  : '');
+    el.style.width  = sz + 'px';
+    el.style.height = sz + 'px';
+    el.dataset.id   = card.id;
+
+    el.innerHTML = `
+      <div class="card-inner">
+        <div class="card-face card-back"></div>
+        <div class="card-face card-front">
+          <span class="card-emoji">${card.emoji}</span>
+        </div>
+      </div>`;
+
+    el.addEventListener('click', () => onCardClick(card.id));
+    board.appendChild(el);
+  });
+}
+
+function getCardEl(id) {
+  return document.querySelector(`.card[data-id="${id}"]`);
+}
+
+function updateStats() {
+  document.getElementById('stat-flips').textContent   = flips;
+  document.getElementById('stat-matched').textContent = matched;
+  const key = String(levelIdx);
+  document.getElementById('stat-best').textContent =
+    bests[key] !== undefined ? bests[key] : '--';
+}
+
+function showHint(msg, type = '') {
+  const el = document.getElementById('hint');
+  el.textContent  = msg;
+  el.className    = 'hint-text' + (type ? ' ' + type : '');
+}
+
+// ══════════════════════════════════════════════
+//  INTERACTION
+// ══════════════════════════════════════════════
+function onCardClick(id) {
+  if (locked) return;
+  const card = cards[id];
+  if (card.flipped || card.matched) return;
+  if (flippedIds.includes(id)) return;
+
+  // flip card
+  card.flipped = true;
+  flips++;
+  updateStats();
+  getCardEl(id).classList.add('flipped');
+
+  flippedIds.push(id);
+
+  if (flippedIds.length === 1) {
+    showHint(`找到另一隻 ${card.emoji} 吧！`);
+    return;
+  }
+
+  // second card flipped
+  const [id1, id2] = flippedIds;
+  const c1 = cards[id1], c2 = cards[id2];
+
+  if (c1.emoji === c2.emoji) {
+    // ✅ MATCH
+    setTimeout(() => {
+      c1.matched = c2.matched = true;
+      getCardEl(id1).classList.add('matched');
+      getCardEl(id2).classList.add('matched');
+      matched++;
+      flippedIds = [];
+      updateStats();
+      showHint(`配對成功！${c1.emoji} 找到朋友了！`, 'good');
+      if (matched === pairs) setTimeout(onWin, 500);
+    }, 300);
+
+  } else {
+    // ❌ NO MATCH — show both for 1.5s then flip back
+    locked = true;
+    showHint('不一樣，再試一次！', 'warn');
+    setTimeout(() => {
+      c1.flipped = c2.flipped = false;
+      getCardEl(id1).classList.remove('flipped');
+      getCardEl(id2).classList.remove('flipped');
+      flippedIds = [];
+      locked = false;
+      showHint('翻開牌，找出兩張相同的動物！');
+    }, 1500);   // 1.5s — long enough for elderly to see
+  }
+}
+
+// ══════════════════════════════════════════════
+//  WIN
+// ══════════════════════════════════════════════
+function onWin() {
+  const key = String(levelIdx);
+  const prev = bests[key];
+  let isNewBest = false;
+  if (!prev || flips < prev) {
+    bests[key] = flips;
+    localStorage.setItem('flipBests', JSON.stringify(bests));
+    isNewBest = true;
+  }
+
+  const { label } = LEVELS[levelIdx];
+  document.getElementById('win-sub').textContent   = `${label}，翻牌`;
+  document.getElementById('win-score').textContent = `${flips} 次`;
+  document.getElementById('win-best').textContent  =
+    isNewBest ? '🌟 新紀錄！太厲害了！' : `最佳紀錄：${bests[key]} 次`;
+
+  // hide harder btn if max level
+  document.getElementById('win-harder').style.display =
+    levelIdx < LEVELS.length - 1 ? '' : 'none';
+
+  document.getElementById('win-overlay').classList.add('show');
+  fireParticles();
+}
+
+function fireParticles() {
+  const pool = ANIMALS.slice(0, pairs);
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const p = document.createElement('div');
+      p.className   = 'particle';
+      p.textContent = pool[Math.floor(Math.random() * pool.length)];
+      p.style.left  = (20 + Math.random() * 60) + 'vw';
+      p.style.top   = (20 + Math.random() * 50) + 'vh';
+      const angle   = Math.random() * 2 * Math.PI;
+      const dist    = 80 + Math.random() * 220;
+      p.style.setProperty('--dx',  Math.cos(angle) * dist + 'px');
+      p.style.setProperty('--dy', (Math.sin(angle) * dist - 120) + 'px');
+      p.style.setProperty('--rot', (Math.random() * 360 - 180) + 'deg');
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 1150);
+    }, i * 35);
+  }
+}
+
+// ══════════════════════════════════════════════
+//  BUTTON EVENTS
+// ══════════════════════════════════════════════
+document.getElementById('btn-reset').addEventListener('click',  resetGame);
+document.getElementById('btn-harder').addEventListener('click', harderGame);
+document.getElementById('btn-new').addEventListener('click',    () => startGame(levelIdx, true));
+document.getElementById('win-replay').addEventListener('click', resetGame);
+document.getElementById('win-harder').addEventListener('click', harderGame);
+
+// ══════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════
+startGame(0);
+</script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js', {{ scope: './' }})
+          .then(r => console.log('[PWA] SW registered:', r.scope))
+          .catch(e => console.warn('[PWA] SW failed:', e));
+      });
+    }
+  </script>
+</body>
+</html>
